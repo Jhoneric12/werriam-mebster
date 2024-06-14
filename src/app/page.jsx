@@ -163,7 +163,7 @@ export default function Home() {
             }
           </>
         }
-        <h1 className="text-center text-title-color text-[0.5rem]">Designed and developed by <span className="text-accent-color">Bianca </span> and <span className="text-accent-color">Jhon Eric</span></h1>
+        <h1 className="text-center text-title-color text-[0.5rem] md:text-xs">Designed and developed by <span className="text-accent-color">Bianca </span> and <span className="text-accent-color">Jhon Eric</span></h1>
       </div>
     </main>
   );
