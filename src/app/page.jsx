@@ -34,6 +34,26 @@ export default function Home() {
     }
   }
 
+  const HandleSearch = async (word) => {
+    setIsLoading(true)
+      try {
+        const dictData = await Dictionary(word)
+        setIsLoading(false)
+        setData(dictData)
+        if (!dictData) {
+          setIsNoResult(true)
+          console.log(data)
+        }
+        else {
+          setIsNoResult(false)
+        }
+      }
+      catch (error) {
+        setIsNoResult(false)
+        console.log(error)
+      }
+  }
+
   // const handlePlay = (source) => {
   //   let phoneticAudio = new Audio(source)
   //   phoneticAudio.play()
@@ -55,8 +75,8 @@ export default function Home() {
               onChange={(e) => findWord(e.target.value)}
               onKeyDown={HandleEnter}
             />
-            <div className="absolute top-0 bottom-0 right-0 rounded-full bg-accent-color h-full w-14 text-center flex items-center justify-center p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-white">
+            <div onClick={() => HandleSearch(word)} className="absolute top-0 bottom-0 right-0 rounded-full bg-accent-color h-full w-14 text-center flex items-center justify-center p-2">
+              <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-white">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </div>
