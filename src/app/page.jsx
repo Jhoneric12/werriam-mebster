@@ -123,7 +123,7 @@ export default function Home() {
                               <ul className="list-disc list-inside mb-4">
                                 {
                                   mean.definitions.map((def, j) => (
-                                    <li key={j} className="text-sm md:text-base text-text-color mt-2 leading-7">{def.definition}</li>
+                                    <li key={j} className="text-sm md:text-base text-text-color mt-2 leading-7 md:leading-8">{def.definition}</li>
                                   ))
                                 }
                               </ul>
