@@ -163,6 +163,7 @@ export default function Home() {
             }
           </>
         }
+        <h1 className="text-center text-title-color text-xs">Designed and developed by Bianca and Jhon Eric</h1>
       </div>
     </main>
   );
