@@ -64,7 +64,7 @@ export default function Home() {
       <div className="flex flex-col gap-6 w-full md:w-[80%] lg:w-[60%]">
         <div className="text-center flex flex-col items-center gap-2 w-full">
           <h1 className="font-extrabold text-2xl text-title-color">Weriam<span className="text-accent-color">Mebster</span></h1>
-          <p className="text-sm md:text-base text-text-color md:w-[80%] lg:w-[60%]">We are a comprehensive online dictionary dedicated to providing accurate definitions for any word you search. Start your exploration today!</p>
+          <p className="text-sm md:text-base text-text-color md:w-full lg:w-[70%]">We are a comprehensive online dictionary dedicated to providing accurate definitions for any word you search. Start your exploration today!</p>
         </div>
         <div className="text-center w-full">
           <div className="relative">
