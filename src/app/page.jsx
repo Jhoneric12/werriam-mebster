@@ -119,37 +119,37 @@ export default function Home() {
                         {
                           item.meanings.map((mean, i) => (
                             <div key={i}>
-                              <h1 className="text-sm font-semibold text-title-color md:text-lg">{mean.partOfSpeech}</h1>
+                              <h1 className="text-base font-semibold text-title-color md:text-lg">{mean.partOfSpeech}</h1>
                               <ul className="list-disc list-inside mb-4">
                                 {
                                   mean.definitions.map((def, j) => (
-                                    <li key={j} className="text-xs md:text-base text-text-color mt-2">{def.definition}</li>
+                                    <li key={j} className="text-sm md:text-base text-text-color mt-2 leading-7">{def.definition}</li>
                                   ))
                                 }
                               </ul>
     
                               {
                                 mean.synonyms.length > 0 ? (
-                                  <div className="text-xs md:text-sm mt-2">
+                                  <div className="text-sm italic md:text-sm mt-2">
                                     <p className="font-medium text-title-color leading-5">Synonyms: <span className="font-regular text-text-color">{mean.synonyms.join(', ')}</span></p>
                                   </div>
                                 )
                                 : 
                                 (
-                                  <div className="text-xs md:text-sm mt-2">
+                                  <div className="text-sm italic md:text-sm mt-2">
                                     <p className="font-medium text-title-color">Synonyms: <span className="font-regular text-text-color">No Results</span></p>
                                   </div>
                                 )
                               }
                               {
                                 mean.antonyms.length > 0 ? (
-                                  <div className="text-xs md:text-sm mt-2">
+                                  <div className="text-sm italic md:text-sm mt-2">
                                     <p className="font-medium text-title-color leading-5">Antonyms: <span className="font-regular text-text-color">{mean.antonyms.join(', ')}</span></p>
                                   </div>
                                 )
                                 : 
                                 (
-                                  <div className="text-xs md:text-sm mt-2">
+                                  <div className="text-sm italic md:text-sm mt-2">
                                     <p className="font-medium text-title-color">Antonyms: <span className="font-regular text-text-color">No Results</span></p>
                                   </div>
                                 )
